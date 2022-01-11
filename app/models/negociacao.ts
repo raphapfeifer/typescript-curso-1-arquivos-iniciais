@@ -2,7 +2,7 @@
 
 export class Negociacao{
 
-    constructor(
+    /*constructor(
         private _data: Date,
         private _quantidade: number,
         private _valor: number){}   
@@ -22,6 +22,17 @@ export class Negociacao{
 
     get volume(): number{
         return this._quantidade * this._valor;
-    }
+    }*/
+
+    // outra forma de declarar a classs usando o readonly
+
+    constructor(
+        public readonly data: Date,
+        public readonly quantidade: number,
+        public readonly valor: number){} 
+        
+        get volume(): number{
+            return this.quantidade * this.valor;
+        }   
 
 }
