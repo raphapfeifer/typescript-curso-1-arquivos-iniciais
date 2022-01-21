@@ -21,10 +21,10 @@ export class Negociacao {
         return this._quantidade * this._valor;
     }*/
     // outra forma de declarar a classs usando o readonly
-    constructor(_data, _quantidade, _valor) {
+    constructor(_data, quantidade, valor) {
         this._data = _data;
-        this._quantidade = _quantidade;
-        this._valor = _valor;
+        this.quantidade = quantidade;
+        this.valor = valor;
     }
     get volume() {
         return this.quantidade * this.valor;
@@ -32,11 +32,5 @@ export class Negociacao {
     get data() {
         const data = new Date(this._data.getTime());
         return data;
-    }
-    get quantidade() {
-        return this._quantidade;
-    }
-    get valor() {
-        return this._valor;
     }
 }

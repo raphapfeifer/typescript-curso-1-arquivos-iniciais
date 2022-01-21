@@ -6,7 +6,7 @@ export class Negociacoes{
     // outra forma de declarar array
     private negociacoes: Negociacao[] = [];
 
-    adiciona(negociacao: Negociacao): void{
+    public adiciona(negociacao: Negociacao): void{
         this.negociacoes.push(negociacao);
     }
 
@@ -15,7 +15,7 @@ export class Negociacoes{
     }*/
 
     //outra forma de declarar o método lista
-    lista(): readonly Negociacao[]{
+    public lista(): readonly Negociacao[]{
         return this.negociacoes;
     }
 
