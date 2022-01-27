@@ -21,6 +21,10 @@ export class NegociacaoController{
 
 
     public adiciona(): void{
+
+        /*
+            COMENTARIO TESTE
+        */
         const negociacao = Negociacao.criaNegociacao(
             this.inputData.value,
             this.inputQuantidade.value,
