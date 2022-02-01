@@ -22,6 +22,8 @@ export class NegociacaoController{
 
     public adiciona(): void{
 
+        const t1 = performance.now();
+
         /*
             COMENTARIO TESTE
         */
@@ -37,6 +39,8 @@ export class NegociacaoController{
             this.negociacoes.adiciona(negociacao);
             this.atualizaView();
             this.limparFormualario();
+            const t2 = performance.now();
+            console.log(`Tempo de execução do método adiciona: ${(t2 -t1)/1000} segundos`)
     }
 
 
