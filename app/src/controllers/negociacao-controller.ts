@@ -3,6 +3,7 @@ import { Negociacoes } from "../models/negociacoes.js";
 import { NegociacoesView } from "../views/negociacoes-views.js";
 import { MensagemView } from "../views/mensagem-view.js";
 import { DiasDaSemana } from "../enums/dias-da-semana.js";
+import { logarTempoDeExecucao } from "../decorators/logar-tempo-de-execucao.js";
 
 export class NegociacaoController{
     private inputData: HTMLInputElement;
@@ -19,10 +20,8 @@ export class NegociacaoController{
         this.negociacoesView.update(this.negociacoes);
     }
 
-
+    @logarTempoDeExecucao()
     public adiciona(): void{
-
-        const t1 = performance.now();
 
         /*
             COMENTARIO TESTE
@@ -39,8 +38,6 @@ export class NegociacaoController{
             this.negociacoes.adiciona(negociacao);
             this.atualizaView();
             this.limparFormualario();
-            const t2 = performance.now();
-            console.log(`Tempo de execução do método adiciona: ${(t2 -t1)/1000} segundos`)
     }
 
 
