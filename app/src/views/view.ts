@@ -1,4 +1,5 @@
 import { logarTempoDeExecucao } from "../decorators/logar-tempo-de-execucao.js";
+import { inspect } from "../decorators/inspect.js";
 
 export abstract class View<T>{
 
@@ -21,7 +22,8 @@ export abstract class View<T>{
 
     protected abstract template(model: T): string;
 
-    @logarTempoDeExecucao()
+    @logarTempoDeExecucao(true)
+    @inspect // exemplo de um decoretor simplificado que não passa nenhum parâmetro que no caso é o inspect
     public update(model: T): void{
         let template = this.template(model);
         if(this.escapar){
