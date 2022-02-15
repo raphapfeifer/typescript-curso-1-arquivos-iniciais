@@ -19,4 +19,7 @@ export class Negociacoes{
         return this.negociacoes;
     }
 
+    public toText(): string{
+        return JSON.stringify(this.negociacoes, null, 2);
+    }
 }

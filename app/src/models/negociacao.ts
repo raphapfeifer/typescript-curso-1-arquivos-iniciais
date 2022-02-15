@@ -40,6 +40,14 @@ export class Negociacao{
             return data;
         }
 
+        public toText() : string{
+            return `
+                Data: ${this.data},
+                Quantidade: ${this.quantidade},
+                Valor: ${this.valor}
+            `;
+        }
+
         public static criaNegociacao(dataString: string, quantidadeString: string,
             valorString: string): Negociacao{
             const exp = /-/g;
