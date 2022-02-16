@@ -1,6 +1,7 @@
 import { Negociacao } from "./negociacao.js";
+import { Imprimivel } from "../interfaces/imprimivel.js";
 
-export class Negociacoes{
+export class Negociacoes implements Imprimivel{
     //private negociacoes: Array<Negociacao> = [];
 
     // outra forma de declarar array

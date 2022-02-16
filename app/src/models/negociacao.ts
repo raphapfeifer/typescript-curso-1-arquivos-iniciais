@@ -1,6 +1,7 @@
+import { Imprimivel } from "../interfaces/imprimivel.js";
 
 
-export class Negociacao{
+export class Negociacao implements Imprimivel{
 
     /*constructor(
         private _data: Date,
@@ -58,3 +59,5 @@ export class Negociacao{
         }
 
 }
+
+

@@ -1,6 +1,7 @@
-import { Negociacao } from "../models/negociacao.js";
 
-export function imprimir(...objetos: any[]){
+import { Imprimivel } from "../interfaces/imprimivel.js";
+
+export function imprimir(...objetos: Imprimivel[]){
     for(let objeto of objetos){
         console.log(objeto.toText());
     }
